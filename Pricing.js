@@ -1,35 +1,18 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import './PricingStyles.css'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import PricingCards from '../components/Pricing'
+import HeroImage from '../components/HeroImage'
 
 const Pricing = () => {
     return (
-        <div className='pricing'>
-            <div className='card-container'>
-                <div className='card'>
-                    <h3></h3>
-                    <span className='bar'></span>
-                    <p className='btc'></p>
-                    
-                    <Link to='/contact' className='btn'></Link>
-                </div>
-                <div className='card'>
-                    <h3></h3>
-                    <span className='bar'></span>
-                    <p className='btc'></p>
-                    
-                    <Link to='/contact' className='btn'></Link>
-                </div>
-                <div className='card'>
-                    <h3></h3>
-                    <span className='bar'></span>
-                    <p className='btc'></p>
-                   
-                    <Link to='/contact' className='btn'></Link>
-                </div>
-            </div>
+        <div>
+            <Navbar />
+            <HeroImage heading='PRICING' text='Choose your Language.' />
+            <PricingCards />
+            <Footer />
         </div>
     )
 }
 
-export default Pricing;
+export default Pricing
