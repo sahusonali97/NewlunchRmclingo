@@ -3,8 +3,6 @@ import {Link} from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
 import './NavbarStyles.css'
 
-
-
 const Navbar = () => {
     const[click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
@@ -14,7 +12,7 @@ const Navbar = () => {
             if(window.scrollY >= 100) {
                 setColor(true)
             } else {
-                setColor(false)
+                setColor(true)
             }
         }
 
@@ -22,21 +20,23 @@ const Navbar = () => {
 
     return (
         <div className={color ? 'header header-bg' : 'header'}>
-           <Link to='/' className="navbar-logo"></Link> 
+           <Link to='/'></Link> 
            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                <li>
                    <Link to='/'>Home</Link>
                </li>
                <li>
-                   <Link to='/training'>About Us</Link>
+                   <Link to='/About'>About Us</Link>
+               </li>
+               <li>
+                   <Link to='/pricing'>FAQs</Link>
                </li>
                
                <li>
-                   <Link to='./Language' className="lang-drop">Language<i className='fas fa-caret-down'/></Link>
-                </li>
-               <li>
-                   <Link to='/'>FAQs</Link>
-               </li>
+                <Link to='/training'>Language</Link>
+                
+                   </li>
+              
                <li>
                    <Link to='/contact'>Contact Us</Link>
                </li>
@@ -49,4 +49,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navbar;
