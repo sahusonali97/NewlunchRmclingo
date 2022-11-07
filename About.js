@@ -1,22 +1,16 @@
 import React from 'react'
 import Footer from '../components/Footer'
-import HeroImage from '../components/HeroImage'
 import Navbar from '../components/Navbar'
-import Form from '../components/Form'
-import Fsecond from '../components/Fsecond'
-
+import Newvideo from '../components/Newvideo'
 
 const About = () => {
     return (
         <div>
             <Navbar />
-            <HeroImage/>
-            <Form />
-            <Fsecond/>
-            <Footer/>
-    
+            <Newvideo />
+            <Footer />
         </div>
     )
 }
 
-export default About
+export default About;
